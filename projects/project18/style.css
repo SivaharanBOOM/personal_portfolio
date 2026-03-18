@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+*{
+    box-sizing:border-box;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+display:flex;
+align-items:center;
+flex-direction:column;
+justify-content:center;
+margin:0;
+height:100vh;
+overflow:hidden;
+background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBlJTIwYnJpZ2h0JTIwY2xvdWR5fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60');
+background-size:cover;
+background-position:center center;
+transition:0.4s;
+}
+
+body::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background-color:rgba(0,0,0,0.7);
+z-index:-1;
+}
+
+.slider-container{
+    box-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height:70vh;
+    width:70vw;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    opacity:0;  
+    height:100vh;
+    width:100vw;
+    background-position:center center;
+    background-size:cover;
+    position:absolute;
+    top:-15vh;
+    left:-15vw;
+    transition:0.4s ease;
+    z-index:1;
+}
+.slide.active{
+    opacity:1;
+}
+
+.arrow{
+    position:fixed;
+    background-color:rgba(0,0,0,0.5);
+    color:white;
+    padding:20px;
+    font-size:30px;
+    border: 2px solid orange;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+}
+.arrow:focus{
+    outline:none;
+}
+.left-arrow{
+    left: calc(15vw - 65px);
+}
+.right-arrow{
+    right: calc(15vw - 65px);
+}
+
+
+
